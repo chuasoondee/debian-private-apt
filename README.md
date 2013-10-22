@@ -1,27 +1,27 @@
-# Debian Private APT
+## Debian Private APT using Reprepro
 
-## Package Requirements
+### Package Requirements
 1. dh-make,
 2. devscripts,
 3. debhelper?
 
-## Steps for creating a debian packaging using dh-make
+### Steps for creating a debian packaging using dh-make
 
-### Export environment variables
-DEBEMAIL="soondee.chua@gmail.com"
-DEBFULLNAME="Soon Dee Chua"
+1. Export environment variables
+```bash
+DEBEMAIL="your_email@email-service.com"
+DEBFULLNAME="Your Full Name"
 export DEBEMAIL DEBFULLNAME
+```
 
-### Run `dh_make` to create new packaging files
+2. Run `dh_make` to create new packaging files
 `dh_make --packagename private-apt_0.1 --native --single --email soondee.chua@gmail.com`
 
-### Edit the following files
-1. `debian/control`
-2. `debian/copyright`
+3. Edit the following files
+  1. `debian/control`
+  2. `debian/copyright`
 
-### Run `debuild` to create deb package
-`debuild -uc -us -b`
-where
-* -uc Do not sign the .changes file.
-* -us Do not sign the source package and
-* -B Spcifies a binary-only build, no source files are to be buildt and/or distributed.
+4. Run `debuild -uc -us -b` to create deb package, where
+  * `-uc` Do not sign the .changes file.
+  * `-us` Do not sign the source package and
+  * `-b` Spcifies a binary-only build, no source files are to be buildt and/or distributed.
