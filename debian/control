@@ -1,0 +1,15 @@
+Source: private-apt
+Section: devel
+Priority: extra
+Maintainer: Soon Dee Chua <soondee.chua@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.2
+# Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://git.debian.org/collab-maint/private-apt.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/private-apt.git;a=summary
+
+Package: private-apt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, reprepro
+Description: Private APT repository for hosting internal applications
+ Private APT repository for hosting internal/private applications.
