@@ -1,11 +1,17 @@
-## Debian Private APT using Reprepro
+## Debian Private APT
+This project creates a .deb file for setting up directories and configuration for hosting private
+APT repository using reprepro.
 
 ### Package Requirements
 1. dh-make,
 2. devscripts,
 3. debhelper?
 
-### Steps for creating a debian packaging using dh-make
+### To Build
+Run `debuild -uc -us -b`
+
+### Notes on Steps for creating a debian packaging using dh-make
+This section describe steps of preparing a debian packaging using dh-make
 
 1. Export environment variables
 ```bash
@@ -15,7 +21,7 @@ export DEBEMAIL DEBFULLNAME
 ```
 
 2. Run `dh_make` to create new packaging files
-`dh_make --packagename private-apt_0.1 --native --single --email soondee.chua@gmail.com`
+`dh_make --packagename private-apt_0.1 --native --single --email your_email@email-service.com`
 
 3. Edit the following files
   1. `debian/control`
