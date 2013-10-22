@@ -3,5 +3,5 @@ Label: Chua Soon Dee Co.
 Codename: wheezy
 Architectures: i386 amd64
 Components: non-free
-Desription: Private APT Repository
+Description: Private APT Repository
 DebOverride: override.wheezy
